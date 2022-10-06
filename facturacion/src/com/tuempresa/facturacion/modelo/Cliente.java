@@ -20,4 +20,5 @@ String nombre;
 
 @Embedded @NoFrame
  Direccion direccion;
+
 }
