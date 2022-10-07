@@ -8,6 +8,7 @@ import lombok.*;
 
 @Entity
 @Getter @Setter
+@View(name="simple", members ="numero, nombre")
 public class Cliente {
 @Id
 @Column(length=6)
@@ -20,5 +21,4 @@ String nombre;
 
 @Embedded @NoFrame
  Direccion direccion;
-
 }
