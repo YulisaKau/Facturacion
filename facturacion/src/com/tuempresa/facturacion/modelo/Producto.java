@@ -33,4 +33,8 @@ String fotos;
 
 @TextArea
 String observaciones;
+
+@ManyToOne
+@DescriptionsList
+Autor autor;
 }
