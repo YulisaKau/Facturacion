@@ -7,13 +7,15 @@ import org.openxava.annotations.*;
 import lombok.*;
 
 @Entity @Getter @Setter
+
+@View (extendsView="super.DEFAULT",
+	members="factura { factura }"
+)
 @View(name="SinClienteNiFactura",
 members=
 "anyo, numero, fecha;"
 +"detalles;"
-		+"observaciones")
-@View (extendsView="super.DEFAULT",
-	members="factura { factura }"
+		+"observaciones"
 )
 public class Pedido extends DocumentoComercial{
 

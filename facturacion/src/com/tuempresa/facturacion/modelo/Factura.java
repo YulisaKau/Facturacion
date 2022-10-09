@@ -18,11 +18,11 @@ members=
 "anyo, numero, fecha;"
 +"detalles;"
 + "observaciones"
-		)
+)
 public class Factura extends DocumentoComercial{
 
 	@OneToMany(mappedBy ="factura")
-	@CollectionView("sinClienteNiFactura")
+	@CollectionView("SinClienteNiFactura")
 	Collection<Pedido> pedidos;
 	
 }
