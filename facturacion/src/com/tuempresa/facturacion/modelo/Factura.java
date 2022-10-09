@@ -4,13 +4,25 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.openxava.annotations.*;
+
 import lombok.*;
 
 @Entity
 @Getter @Setter
+@View(extendsView ="super.DEFAULT",
+members="pedidos{pedidos}"
+ )
+@View(name="SinClienteNiPedidos",
+members=
+"anyo, numero, fecha;"
++"detalles;"
++ "observaciones"
+		)
 public class Factura extends DocumentoComercial{
 
 	@OneToMany(mappedBy ="factura")
+	@CollectionView("sinClienteNiFactura")
 	Collection<Pedido> pedidos;
 	
 }
