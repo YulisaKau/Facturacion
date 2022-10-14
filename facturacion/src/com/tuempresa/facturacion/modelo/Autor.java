@@ -20,4 +20,5 @@ public class Autor extends Identificable{
 	@OneToMany(mappedBy="autor")
 	@ListProperties("numero, descripcion, precio")
 	Collection<Producto> productos;
+	// el cambio
 }
