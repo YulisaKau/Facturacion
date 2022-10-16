@@ -53,14 +53,15 @@ abstract public class DocumentoComercial extends Identificable{
     			+   "documentoComercial.iva,"
     			+   "documentoComercial.importeTotal"
     			+ "]"
-    )
+     )
     private Collection<Detalle> detalles;
     
+    @DefaultValueCalculator(CalculadorPorcentajeIVA.class)
     @Digits(integer=2, fraction=0)
     BigDecimal porcentajeIVA;
     
     @ReadOnly
-    @Stereotype("MEMO")
+    @Stereotype("DINERO")
     @Calculation("sum(detalles.importe) * porcentajeIVA / 100")
     BigDecimal iva;
     
