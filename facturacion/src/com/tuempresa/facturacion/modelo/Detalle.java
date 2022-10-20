@@ -30,5 +30,4 @@ public class Detalle {
 	)
 	@Stereotype("DINERO")
 	BigDecimal precioPorUnidad;
-	
 }
